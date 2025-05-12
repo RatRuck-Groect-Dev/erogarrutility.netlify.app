@@ -44,44 +44,35 @@
             padding: 40px 0;
         }
         .box {
-            width: 90%;
-            margin: 40px auto;
-            padding: 30px;
+            width: 60%; /* ボックス幅を縮小 */
+            margin: 40px auto; /* 中央寄せ */
+            padding: 20px;
             background-color: #f5f5f5;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            text-align: center; /* 中央揃え */
         }
         .box:hover {
             transform: translateY(-5px);
         }
-        .box-left {
-            margin-right: auto;
-        }
-        .box-right {
-            margin-left: auto;
-        }
 
         /* 画像スタイル */
         .box-image {
-            width: 100%;
+            width: 50%; /* 画像サイズを縮小 */
+            max-width: 300px; /* 最大幅を制限 */
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin: 0 auto; /* 中央寄せ */
+            display: block;
         }
 
         /* レスポンシブ対応 */
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .box {
-                width: 80%;
-                padding: 40px;
+                width: 80%; /* スマホでは少し広めに */
             }
-            .box-left {
-                margin-right: 10%;
-                margin-left: 0;
-            }
-            .box-right {
-                margin-left: 10%;
-                margin-right: 0;
+            .box-image {
+                width: 70%; /* スマホでは画像を少し大きく */
             }
         }
     </style>
@@ -95,25 +86,13 @@
     <!-- スクロール後のコンテンツセクション -->
     <section class="content-section">
         <div class="box-container">
-            <!-- 最初のボックス（左寄せ・画像表示） -->
-            <div class="box box-left">
-                <img src="image.png" alt="え !? たっぽってる" class="box-image">
-                <h2>え !? たっぽってる</h2>
-                <p>楽しみにしてるね♪</p>
+            <!-- 最初のボックス（画像のみ） -->
+            <div class="box">
+                <img src="image.png" alt="" class="box-image">
             </div>
-            <!-- 2番目のボックス（右寄せ） -->
-            <div class="box box-right">
-                <h2>イト♪</h2>
-                <p>ええっ !? まだ遊べるの</p>
-            </div>
-            <!-- 追加ボックス例 -->
-            <div class="box box-left">
-                <h2>作品タイトル3</h2>
-                <p>ここに作品の説明や画像を配置できます。</p>
-            </div>
-            <div class="box box-right">
-                <h2>作品タイトル4</h2>
-                <p>ここに作品の説明や画像を配置できます。</p>
+            <!-- 2番目のボックス -->
+            <div class="box">
+                <!-- ここに追加コンテンツを入れることができます -->
             </div>
         </div>
     </section>
